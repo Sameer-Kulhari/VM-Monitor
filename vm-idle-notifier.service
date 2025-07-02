@@ -1,0 +1,12 @@
+[Unit]
+Description=XRDP VM Idle Notifier Service
+After=network.target
+
+[Service]
+ExecStart=/opt/vm-monitor/vm-idle-notifier.sh
+Restart=always
+RestartSec=300
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
